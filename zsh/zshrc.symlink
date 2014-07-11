@@ -1,1 +1,18 @@
+export CODE=$HOME/code
+export ZSH=$CODE/dotfiles
+
+export GOPATH=$CODE/go
+export RUBIES_DIR=$HOME/.rubies
+export PGDATA=/usr/local/var/postgres/data
+
+PATH=/usr/local/share/npm/bin:$PATH
 PATH=/usr/local/git/bin:$PATH
+PATH=$PATH:$GOPATH/bin
+
+export EDITOR='mvim -vf'
+
+for config_file ($ZSH/**/*.zsh) {
+  source $config_file
+}
+
+[ -e $HOME/.localrc ] && source $HOME/.localrc
