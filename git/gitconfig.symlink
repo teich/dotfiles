@@ -5,6 +5,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = "mvim -fv"
+[push]
+	default = simple
 [user]
 	name = Jonathan Clem
 	email = jonathan@jclem.net
