@@ -1,0 +1,12 @@
+if ! pg_ctl status | grep 'is running' &> /dev/null; then
+  echo 'Postgres is not running'
+  return 1
+fi
+
+if pg_ctl stop -D $PGDATA &> /dev/null; then
+  echo 'Postgres stopped'
+  return 0
+else
+  echo 'Postgres not stopped'
+  return 1
+fi
