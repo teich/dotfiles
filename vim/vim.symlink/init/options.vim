@@ -23,7 +23,8 @@ set nowrap
 " Show line numbers
 set number
 
-" Ignore case when searching
+" Search with smart casing
+set ignorecase
 set smartcase
 
 " Use incremental search
