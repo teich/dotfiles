@@ -10,3 +10,5 @@
 [user]
 	name = Jonathan Clem
 	email = jonathan@jclem.net
+[credential]
+	helper = osxkeychain
