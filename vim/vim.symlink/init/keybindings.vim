@@ -34,4 +34,4 @@ vmap <leader>s :s/
 imap kj <esc>
 
 " Clear search with space
-nnoremap <silent> <space>
+nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
