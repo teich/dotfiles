@@ -32,3 +32,6 @@ vmap <leader>s :s/
 
 " Quick switch to normal mode
 imap kj <esc>
+
+" Clear search with space
+nnoremap <silent> <space>
