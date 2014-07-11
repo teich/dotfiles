@@ -1,2 +1,2 @@
 set background=dark
-colorscheme base16-londontube
+colorscheme base16-tomorrow
