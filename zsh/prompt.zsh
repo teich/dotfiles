@@ -27,7 +27,7 @@ git_dirty () {
   fi
 }
 
-# ➼  directory[hostname] { branch } ✓
+# ➼  directory [hostname] { branch } ✓
 export PROMPT='%{$fg_bold[red]%}➼\
   %{$reset_color%}%{$fg[blue]%}%c%{$reset_color%}\
  %{$fg[yellow]%}[%m% ]%{$reset_color%}\
