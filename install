@@ -1,0 +1,68 @@
+#!/bin/zsh
+
+autoload colors && colors
+
+# Create a symlink, removing it first if it exists
+create_link () {
+  if [ -e $2 ]; then
+    rm $2
+  fi
+
+  ln -s $1 $2
+
+  echo "$fg[green]  ☆  $2 linked.$reset_color"
+}
+
+# Prompt when a symlink already exists.
+# Y: remove and re-link
+# n: skip
+# A: remove and re-link all files
+# q: quit, exit 1
+prompt_exists () {
+  echo "$fg[yellow]  ☆  $2 already exists. Overwrite? [(Y)es (n)o (A)ll (q)uit]$reset_color"
+
+  read -qs action
+
+  case $action in
+  Y) create_link $1 $2
+     ;;
+  A) link_all=0
+     create_link $1 $2
+     ;; 
+  q) echo "$fg[red]Goodbye.$reset_color"
+     exit 1
+     ;;
+  *) echo "$fg[red]  ☆  Not linking.$reset_color"
+  esac
+}
+
+echo "\n$fg[green]Installing symlinks.$reset_color"
+
+# Loop over symlinks, linking and prompting when necessary.
+for symlink (./**/*.symlink) {
+  link_to_path="$(pwd)$(echo $symlink | sed 's/\.//')"
+  link_from_path="$HOME/.$(basename $symlink | awk -F. '{ $NF=""; print }' | sed 's/\ \([^$]\)/\.\1/' | sed 's/\ $//')"
+
+  if [ $link_all ]; then
+    create_link $link_to_path $link_from_path
+  else
+    if [ -e $link_from_path ]; then
+      prompt_exists $link_to_path $link_from_path
+    else
+      create_link $link_to_path $link_from_path
+    fi
+  fi
+}
+
+# Clone Vundle so that Vim bundles can be installed
+echo "$fg[green]Cloning Vundle.\n$reset_color"
+mkdir -p vim/vim.symlink/bundle 2> /dev/null
+git clone git://github.com/gmarik/vundle.git vim/vim.symlink/bundle/vundle 2> /dev/null
+
+# Install Vundle bundles
+echo "$fg[green]Installing Vundle bundles.\n$reset_color"
+sleep 0.5
+vim +BundleInstall +qall 2> /dev/null
+echo "$fg[green]All done.\n$reset_color"
+
+exit 0

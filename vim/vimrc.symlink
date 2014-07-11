@@ -1,0 +1,20 @@
+filetype off
+set nocompatible
+
+set rtp+=$HOME/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'chriskempson/base16-vim'
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+
+syntax on
+filetype plugin indent on
+
+runtime! init/**.vim
+runtime! functions/**.vim
