@@ -15,4 +15,6 @@ for config_file ($ZSH/**/*.zsh) {
   source $config_file
 }
 
+eval "$(gh alias -s)"
+
 [ -e $HOME/.localrc ] && source $HOME/.localrc
