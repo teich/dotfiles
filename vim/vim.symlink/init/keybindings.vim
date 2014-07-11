@@ -12,6 +12,9 @@ nmap <leader>v :vsp<cr>
 " Re-load vimrc
 nmap <leader>rv :source $MYVIMRC<cr>
 
+" Use Ack
+nmap <leader>a :Ack<space>
+
 " Remove line
 nmap - dd
 
