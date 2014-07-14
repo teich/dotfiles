@@ -17,4 +17,6 @@ for config_file ($ZSH/**/*.zsh) {
 
 eval "$(gh alias -s)"
 
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+
 [ -e $HOME/.localrc ] && source $HOME/.localrc
