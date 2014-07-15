@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle 'chriskempson/base16-vim'
 Bundle 'gmarik/vundle'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'mileszs/ack.vim'
