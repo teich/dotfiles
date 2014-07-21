@@ -15,6 +15,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 
 syntax on
