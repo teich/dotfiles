@@ -15,6 +15,9 @@ for config_file ($ZSH/**/*.zsh) {
   source $config_file
 }
 
+autoload -U compinit
+compinit
+
 eval "$(gh alias -s)"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
