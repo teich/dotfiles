@@ -49,8 +49,11 @@ set shell=/bin/zsh
 set mouse=a
 
 " Ignore directories for wildcards (name completion, etc)
-set wildignore+=tmp
+set wildignore+=bower_components
+set wildignore+=coverage
 set wildignore+=node_modules
+set wildignore+=public
+set wildignore+=tmp
 
 " Write files when leaving buffer via a command
 set autowriteall
