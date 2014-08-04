@@ -5,6 +5,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	pr = pull-request
 	br = browse
+	deploy-current = "!f() { git push $1 `git rev-parse --abbrev-ref HEAD`:master; }; f"
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = "mvim -fv"
