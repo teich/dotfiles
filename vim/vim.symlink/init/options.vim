@@ -74,4 +74,5 @@ set colorcolumn=80
 
 " No swap files, no backup files
 set noswapfile
+set nowritebackup
 set nobackup
