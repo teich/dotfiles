@@ -6,10 +6,13 @@ call vundle#rc()
 
 Bundle 'Townk/vim-autoclose'
 Bundle 'chriskempson/base16-vim'
+Bundle 'dart-lang/dart-vim-plugin'
 Bundle 'gmarik/vundle'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'mustache/vim-mustache-handlebars'
