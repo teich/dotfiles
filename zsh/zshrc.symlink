@@ -1,4 +1,9 @@
-export CODE=$HOME/code
+[ -e $HOME/.localrc ] && source $HOME/.localrc
+
+if [[ $CODE = '' ]]; then
+  export CODE=$HOME/code
+fi
+
 export ZSH=$CODE/dotfiles
 
 export GOPATH=$CODE/go
