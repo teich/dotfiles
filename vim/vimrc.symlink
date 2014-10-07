@@ -28,6 +28,7 @@ Bundle 'tpope/vim-heroku'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/Align'
+Bundle 'wting/rust.vim'
 
 syntax on
 filetype plugin indent on
