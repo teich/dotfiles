@@ -25,6 +25,7 @@ compinit
 
 eval "$(gh alias -s)"
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 [ -e $HOME/.localrc ] && source $HOME/.localrc
