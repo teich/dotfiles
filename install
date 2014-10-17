@@ -54,6 +54,24 @@ for symlink (./**/*.symlink) {
   fi
 }
 
+# Copy hk plugins to /usr/local/lib/hk/plugin
+mkdir -p /usr/local/lib/hk/plugin
+echo "\n$fg[green]Installing hk plugins.$reset_color"
+for plugin (./hk/*) {
+  link_to_path=$(pwd)/hk/$(basename $plugin)
+  link_from_path="/usr/local/lib/hk/plugin/$(basename $plugin)"
+
+  if [ $link_all ]; then
+    create_link $link_to_path $link_from_path
+  else
+    if [ -e $link_from_path ]; then
+      prompt_exists $link_to_path $link_from_path
+    else
+      create_link $link_to_path $link_from_path
+    fi
+  fi
+}
+
 # Clone Vundle so that Vim bundles can be installed
 echo "\n$fg[green]Cloning Vundle.\n$reset_color"
 mkdir -p vim/vim.symlink/bundle 2> /dev/null
