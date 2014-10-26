@@ -21,6 +21,9 @@ nmap - dd
 " Comment a line out
 map <silent> <leader>/ :call NERDComment(1, 'toggle')<cr>
 
+" Toggle Gundo
+nmap <leader>u :GundoToggle<CR>
+
 " Buffer navigation
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
