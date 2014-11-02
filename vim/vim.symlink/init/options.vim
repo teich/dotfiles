@@ -6,7 +6,7 @@ set listchars=trail:·
 set encoding=utf-8
 
 " Set the font for GUIs
-set guifont=Inconsolata:h14
+set guifont=Inconsolata:h16
 
 " Use text tabs
 set guioptions-=e
