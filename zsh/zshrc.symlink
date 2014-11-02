@@ -25,6 +25,8 @@ compinit
 
 eval "$(gh alias -s)"
 
+alias vim="mvim -v"
+
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
