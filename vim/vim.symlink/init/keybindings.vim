@@ -41,3 +41,16 @@ imap kj <esc>
 
 " Clear search with space
 nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
+
+" Toggle background
+function! ToggleBackground()
+  if &bg == "light"
+    colorscheme base16-tomorrow
+    set bg=dark
+  else
+    colorscheme base16-solarized
+    set bg=light
+  endif
+endfunction
+command! ToggleBackground call ToggleBackground()
+nmap <leader>bg :ToggleBackground<cr>
