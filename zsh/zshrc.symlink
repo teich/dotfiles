@@ -14,8 +14,14 @@ PATH=/usr/local/share/npm/bin:$PATH
 PATH=/usr/local/git/bin:$PATH
 PATH=$PATH:$GOPATH/bin
 
-export EDITOR='mvim -vf'
+platform=`uname`
 
+if [[ $platform == "Darwin" ]]; then
+  export EDITOR='mvim -vf'
+else
+  export EDITOR='vim -f'
+fi
+  
 for config_file ($ZSH/**/*.zsh) {
   source $config_file
 }
@@ -25,7 +31,9 @@ compinit
 
 eval "$(gh alias -s)"
 
-alias vim="mvim -v"
+if [[ $platform == "Darwin" ]]; then
+  alias vim="mvim"
+fi
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh

@@ -8,7 +8,6 @@
 	deploy-current = "!f() { git push $1 `git rev-parse --abbrev-ref HEAD`:master; }; f"
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = "mvim -fv"
 [push]
 	default = simple
 [user]
