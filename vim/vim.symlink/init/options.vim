@@ -1,7 +1,3 @@
-" Highlight trailing whitespace
-set list
-set listchars=trail:·
-
 " UTF-8 encoding
 set encoding=utf-8
 
@@ -76,3 +72,7 @@ set colorcolumn=80
 set noswapfile
 set nowritebackup
 set nobackup
+
+" Highlight trailing whitespace
+set list
+set listchars=trail:·
