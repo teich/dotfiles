@@ -32,7 +32,7 @@ compinit
 eval "$(gh alias -s)"
 
 if [[ $platform == "Darwin" ]]; then
-  alias vim="mvim"
+  alias vim="mvim -vf"
 fi
 
 source /usr/local/share/chruby/chruby.sh
