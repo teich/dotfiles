@@ -50,6 +50,11 @@ nmap <leader>4 :set foldlevel=4<cr>
 nmap <leader>5 :set foldlevel=5<cr>
 nmap <leader>6 :set foldlevel=6<cr>
 
+ino <c-j> <c-r>=TriggerSnippet()<cr>
+snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
+
+nmap <leader>rs :callsReloadAllSnippets()<cr>
+
 " Toggle background
 function! ToggleBackground()
   if &bg == "light"

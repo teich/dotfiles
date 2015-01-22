@@ -4,6 +4,9 @@ set encoding=utf-8
 " Set the font for GUIs
 set guifont=Inconsolata:h18
 
+" Set the fold level to 20
+set foldlevelstart=20
+
 " Use text tabs
 set guioptions-=e
 
