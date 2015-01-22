@@ -42,6 +42,14 @@ imap kj <esc>
 " Clear search with space
 nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
 
+" Folds
+nmap <leader>1 :set foldlevel=1<cr>
+nmap <leader>2 :set foldlevel=2<cr>
+nmap <leader>3 :set foldlevel=3<cr>
+nmap <leader>4 :set foldlevel=4<cr>
+nmap <leader>5 :set foldlevel=5<cr>
+nmap <leader>6 :set foldlevel=6<cr>
+
 " Toggle background
 function! ToggleBackground()
   if &bg == "light"
