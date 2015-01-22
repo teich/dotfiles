@@ -2,7 +2,7 @@
 set encoding=utf-8
 
 " Set the font for GUIs
-set guifont=Inconsolata:h16
+set guifont=Inconsolata:h18
 
 " Use text tabs
 set guioptions-=e
