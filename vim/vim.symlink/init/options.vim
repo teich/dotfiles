@@ -53,6 +53,7 @@ set wildignore+=coverage
 set wildignore+=node_modules
 set wildignore+=public
 set wildignore+=tmp
+set wildignore+=dist
 
 " Write files when leaving buffer via a command
 set autowriteall
