@@ -5,7 +5,7 @@ set rtp+=$HOME/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'Townk/vim-autoclose'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'chriskempson/base16-vim'
 Bundle 'dart-lang/dart-vim-plugin'
 Bundle 'fatih/vim-go'
