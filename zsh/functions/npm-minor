@@ -1,0 +1,1 @@
+npm-pre-version && npm version minor && npm-post-version
