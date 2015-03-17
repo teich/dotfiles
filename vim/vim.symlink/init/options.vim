@@ -2,7 +2,7 @@
 set encoding=utf-8
 
 " Set the font for GUIs
-set guifont=Inconsolata:h18
+set guifont=Inconsolata:h16
 
 " Set the fold level to 20
 set foldlevelstart=20
