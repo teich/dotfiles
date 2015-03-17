@@ -35,6 +35,9 @@ if [[ $platform == "Darwin" ]]; then
   alias vim="mvim -vf"
 fi
 
+# Alias `heroku`
+alias hr="heroku"
+
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
