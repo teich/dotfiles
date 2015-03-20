@@ -10,6 +10,9 @@ export GOPATH=$CODE/go
 export RUBIES_DIR=$HOME/.rubies
 export PGDATA=/usr/local/var/postgres/data
 
+export NVM_DIR=$HOME/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm ]
+
 PATH=/usr/local/share/npm/bin:$PATH
 PATH=/usr/local/git/bin:$PATH
 PATH=$PATH:$GOPATH/bin
@@ -29,7 +32,7 @@ for config_file ($ZSH/**/*.zsh) {
 autoload -U compinit
 compinit
 
-eval "$(gh alias -s)"
+eval "$(hub alias -s)"
 
 if [[ $platform == "Darwin" ]]; then
   alias vim="mvim -vf"
