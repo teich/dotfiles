@@ -21,14 +21,14 @@ create_link () {
 prompt_exists () {
   echo "$fg[yellow]  ☆  $2 already exists. Overwrite? [(Y)es (n)o (A)ll (q)uit]$reset_color"
 
-  read -qs action
+  read -ks action
 
   case $action in
   Y) create_link $1 $2
      ;;
   A) link_all=0
      create_link $1 $2
-     ;; 
+     ;;
   q) echo "$fg[red]Goodbye.$reset_color"
      exit 1
      ;;
