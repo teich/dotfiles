@@ -41,9 +41,6 @@ fi
 # Alias `heroku`
 alias hr="heroku"
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 [ -e $HOME/.localrc ] && source $HOME/.localrc
 ###-begin-npm-completion-###
 #
