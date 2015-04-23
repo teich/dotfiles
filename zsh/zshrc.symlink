@@ -1,7 +1,7 @@
 [ -e $HOME/.localrc ] && source $HOME/.localrc
 
 if [[ $CODE = '' ]]; then
-  export CODE=$HOME/code
+  export CODE=$HOME/src
 fi
 
 export ZSH=$CODE/dotfiles

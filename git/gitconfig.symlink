@@ -11,9 +11,9 @@
 [push]
 	default = simple
 [user]
-	name = Jonathan Clem
-	email = jotclem@gmail.com
+	name = Oren Teich
+	email = oren@teich.net
 [credential]
 	helper = osxkeychain
 [github]
-	user = jclem
+	user = teich
