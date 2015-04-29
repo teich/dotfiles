@@ -18,11 +18,11 @@ PATH=$HOME/bin:$PATH
 
 platform=`uname`
 
-if [[ $platform == "Darwin" ]]; then
-  export EDITOR='mvim -vf'
-else
+# if [[ $platform == "Darwin" ]]; then
+#   export EDITOR='mvim -vf'
+# else
   export EDITOR='vim -f'
-fi
+# fi
 
 for config_file ($ZSH/**/*.zsh) {
   source $config_file
@@ -32,10 +32,6 @@ autoload -U compinit
 compinit
 
 eval "$(hub alias -s)"
-
-if [[ $platform == "Darwin" ]]; then
-  alias vim="mvim -vf"
-fi
 
 # Alias `heroku`
 alias hr="heroku"
