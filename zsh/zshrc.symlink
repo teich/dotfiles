@@ -1,11 +1,8 @@
-[ -e $HOME/.localrc ] && source $HOME/.localrc
-
 if [[ $CODE = '' ]]; then
   export CODE=$HOME/src
 fi
 
 export ZSH=$CODE/dotfiles
-
 export GOPATH=$CODE/go
 export RUBIES_DIR=$HOME/.rubies
 export PGDATA=/usr/local/var/postgres/data
@@ -13,16 +10,11 @@ export PGDATA=/usr/local/var/postgres/data
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm ]
 
-PATH=/usr/local/share/npm/bin:$PATH
-PATH=$HOME/bin:$PATH:/usr/local/bin
+PATH=$HOME/bin:/usr/local/share/npm/bin:$PATH
 
 platform=`uname`
 
-# if [[ $platform == "Darwin" ]]; then
-#   export EDITOR='mvim -vf'
-# else
-  export EDITOR='vim -f'
-# fi
+export EDITOR='vim -f'
 
 for config_file ($ZSH/**/*.zsh) {
   source $config_file
@@ -38,6 +30,9 @@ alias hr="heroku"
 
 # Emacs bindings
 bindkey -e
+setopt inc_append_history
+setopt share_history
+HISTFILE=~/.zsh_histor
 
 proj() {
   cd $(find $CODE -maxdepth 2 -type d | selecta)
