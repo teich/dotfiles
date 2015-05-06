@@ -9,4 +9,5 @@ These are my dotfiles. Install them with `./install`. They assume you've got thi
 brew install hub
 brew install ag
 brew install vim
+brew install pandoc
 ```
