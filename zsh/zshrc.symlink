@@ -14,7 +14,7 @@ export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm ]
 
 PATH=/usr/local/share/npm/bin:$PATH
-PATH=$HOME/bin:$PATH
+PATH=$HOME/bin:$PATH:/usr/local/bin
 
 platform=`uname`
 
