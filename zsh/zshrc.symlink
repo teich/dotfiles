@@ -25,10 +25,6 @@ compinit
 
 eval "$(hub alias -s)"
 
-if [[ $platform == "Darwin" ]]; then
-  alias vim="mvim -vf"
-fi
-
 # Alias `heroku`
 alias hr="heroku"
 
