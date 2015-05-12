@@ -1,8 +1,5 @@
 let mapleader = ','
 
-" Toggle NERDTree
-nmap <silent> \ :NERDTreeToggle<cr>
-
 " Vertical split
 nmap <leader>v :vsp<cr>
 
