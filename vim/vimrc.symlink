@@ -6,17 +6,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'sjl/gundo.vim'
-Plugin 'junegunn/goyo.vim'
-
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()

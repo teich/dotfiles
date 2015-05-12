@@ -1,11 +1,14 @@
-" Use text tabs
-set guioptions-=e
+set visualbell                         " Suppress bell
 
-" Suppress bell
-set visualbell
+set nobackup                           " do not keep backups after close
+set nowritebackup                      " do not keep a backup while working
+set noswapfile                         " don't keep swp files either
 
-" Do not wrap text
-set nowrap
+set nowrap                             " Do not wrap text
+
+set tabstop=4                          " visual spaces per tab
+set softtabstop=4                       " number of spaces in tab when editing
+set expandtab                          " tabs are spaces
 
 " Show line numbers
 set number
