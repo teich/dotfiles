@@ -1,43 +1,26 @@
-filetype off
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=$HOME/.vim/bundle/vundle
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'Townk/vim-autoclose'
-Bundle 'chriskempson/base16-vim'
-Bundle 'dart-lang/dart-vim-plugin'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'fatih/vim-go'
-Bundle 'gmarik/vundle'
-Bundle 'jdonaldson/vaxe'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-heroku'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/Align'
-Bundle 'vim-scripts/PreserveNoEOL'
-Bundle 'wavded/vim-stylus'
-Bundle 'wting/rust.vim'
+" let Vundle manage Vundle, required
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-fugitive'
 
-syntax on
+" All of your Plugins must be added before the following line
+call vundle#end()
 filetype plugin indent on
 
+syntax on
 runtime! init/**.vim
