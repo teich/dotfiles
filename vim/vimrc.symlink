@@ -15,7 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'sjl/gundo.vim'
-
+Plugin 'junegunn/goyo.vim'
 
 
 " All of your Plugins must be added before the following line

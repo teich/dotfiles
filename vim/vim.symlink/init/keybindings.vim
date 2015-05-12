@@ -17,3 +17,6 @@ map <silent> <leader>/ :call NERDComment(1, 'toggle')<cr>
 
 " Toggle Gundo
 nmap <leader>u :GundoToggle<CR>
+
+" Toggle zen
+map <leader>z :Goyo<cr>
