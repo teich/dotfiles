@@ -30,9 +30,13 @@ alias hr="heroku"
 
 # Emacs bindings
 bindkey -e
-setopt inc_append_history
-setopt share_history
-HISTFILE=~/.zsh_histor
+
+## History
+HISTFILE=~/.zhistory       # enable history saving on shell exit
+HISTSIZE=1200                  # lines of history to maintain memory
+SAVEHIST=1000                  # lines of history to maintain in history file.
+setopt INC_APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST  # allow dups, but expire old ones when I hit HISTSIZE
 
 proj() {
   cd $(find $CODE -maxdepth 2 -type d | selecta)
