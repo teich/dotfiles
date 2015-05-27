@@ -1,1 +1,0 @@
-npm run build && git diff --exit-code && git push --follow-tags && npm publish

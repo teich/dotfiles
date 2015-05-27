@@ -1,1 +1,0 @@
-git diff --exit-code && npm prune && npm install && npm test
