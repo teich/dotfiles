@@ -38,9 +38,6 @@ SAVEHIST=1000                  # lines of history to maintain in history file.
 setopt INC_APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST  # allow dups, but expire old ones when I hit HISTSIZE
 
-proj() {
-  cd $(find $CODE -maxdepth 2 -type d | selecta)
-}
-alias wp='proj'
+eval "$(docker-machine env dev)"
 
 [ -e $HOME/.localrc ] && source $HOME/.localrc
