@@ -39,4 +39,6 @@ proj() {
 }
 alias wp='proj'
 
+eval "$(docker-machine env dev)"
+
 [ -e $HOME/.localrc ] && source $HOME/.localrc
