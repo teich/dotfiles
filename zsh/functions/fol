@@ -1,1 +1,3 @@
-heroku pg:psql -a canvas-api-prod BRONZE
+# heroku pg:psql -a canvas-api-prod BRONZE
+
+pgcli `heroku config:get HEROKU_POSTGRESQL_BRONZE_URL -a canvas-api-prod`

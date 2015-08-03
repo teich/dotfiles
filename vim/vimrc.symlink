@@ -1,14 +1,22 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Auto install vundle
+if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
+    !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+endif
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'altercation/vim-colors-solarized.git'
-Plugin 'editorconfig/editorconfig-vim'
 Plugin 'gmarik/Vundle.vim'
+
+" Colors
+Plugin 'altercation/vim-colors-solarized.git'
+
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
