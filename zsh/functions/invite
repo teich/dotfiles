@@ -1,12 +1,12 @@
-function cmd {
+function invite-cmd {
   heroku run bin/nwrap bin/invite-token --to=$1 -a canvas-api-prod
 }
 
 # if a second argument run that # of times.
 if [ -n "${2}" ]; then
   for i in {1..$2}; do
-    cmd $1
+    invite-cmd $1
   done
 else
-  cmd $1
+  invite-cmd $1
 fi
