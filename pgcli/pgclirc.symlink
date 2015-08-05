@@ -1,0 +1,38 @@
+[main]
+
+# Enables context sensitive auto-completion. If this is disabled the all
+# possible completions will be listed.
+smart_completion = True
+
+# Multi-line mode allows breaking up the sql statements into multiple lines. If
+# this is set to True, then the end of the statements must have a semi-colon.
+# If this is set to False then sql statements can't be split into multiple
+# lines. End of line (return) is considered as the end of the statement.
+multi_line = False
+
+# log_file location.
+log_file = ~/.pgcli.log
+
+# Default log level. Possible values: "CRITICAL", "ERROR", "WARNING", "INFO"
+# and "DEBUG".
+log_level = INFO
+
+# Timing of sql statments and table rendering.
+timing = True
+
+# Table format. Possible values: psql, plain, simple, grid, fancy_grid, pipe,
+# orgtbl, rst, mediawiki, html, latex, latex_booktabs.
+# Recommended: psql, fancy_grid and grid.
+table_format = psql
+
+# Syntax Style. Possible values: manni, igor, xcode, vim, autumn, vs, rrt,
+# native, perldoc, borland, tango, emacs, friendly, monokai, paraiso-dark,
+# colorful, murphy, bw, pastie, paraiso-light, trac, default, fruity
+syntax_style = default
+
+# Enables vi-mode
+vi = False
+[named queries]
+active = "WITH collection_size AS (    SELECT count(*), collection_id     FROM collection_memberships     WHERE collection_id != (SELECT id from collections WHERE name = 'canvas')    GROUP BY collection_id  )  SELECT DISTINCT collections.name, count(*)  FROM canvases, collections  WHERE canvases.collection_id IN      (SELECT collection_id       FROM collection_size       WHERE count > 1)    AND to_timestamp(cast(DATA->'m'->>'mtime' AS bigint) / 1000) > now() - interval '1 week'  AND collections.id = canvases.collection_id GROUP BY 1"
+unteam = "WITH invited_users AS ( select invite_tokens.user_id AS user_id, collections.id AS collection_id FROM invite_tokens, collections WHERE user_id IS NOT NULL AND invite_tokens.recipient = collections.name), collection_users AS ( select user_id, collection_id FROM collection_memberships) SELECT invited_users.user_id, invited_users.collection_id FROM invited_users LEFT JOIN collection_users ON invited_users.user_id = collection_users.user_id AND invited_users.collection_id = collection_users.collection_id WHERE collection_users.user_id IS NULL"
+unclaimed = "select * from ( SELECT recipient, count(CASE WHEN redeemed_at IS NULL THEN 1 END) as notyet, count(CASE WHEN redeemed_at IS NOT NULL THEN 1 END) as yup FROM invite_tokens GROUP BY recipient ORDER BY 2 DESC)  as foo where notyet > 0"
