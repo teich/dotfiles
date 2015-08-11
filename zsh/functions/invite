@@ -5,8 +5,8 @@ function invite-cmd {
 # if a second argument run that # of times.
 if [ -n "${2}" ]; then
   for i in {1..$2}; do
-    invite-cmd $1
+    invite-cmd $1 | grep Token | cut -d ' ' -f 2
   done
 else
-  invite-cmd $1
+  invite-cmd $1 | grep Token | cut -d ' ' -f 2
 fi
