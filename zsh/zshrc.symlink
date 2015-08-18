@@ -41,3 +41,5 @@ setopt HIST_EXPIRE_DUPS_FIRST  # allow dups, but expire old ones when I hit HIST
 ## eval "$(docker-machine env dev)"
 
 [ -e $HOME/.localrc ] && source $HOME/.localrc
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
