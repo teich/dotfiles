@@ -8,7 +8,8 @@ export RUBIES_DIR=$HOME/.rubies
 export PGDATA=/usr/local/var/postgres/data
 
 export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm ]
+source $(brew --prefix nvm)/nvm.sh
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm ]
 
 PATH=$HOME/bin:/usr/local/share/npm/bin:$PATH
 
@@ -43,3 +44,5 @@ setopt HIST_EXPIRE_DUPS_FIRST  # allow dups, but expire old ones when I hit HIST
 eval "$(docker-machine env dev)"
 
 [ -e $HOME/.localrc ] && source $HOME/.localrc
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
