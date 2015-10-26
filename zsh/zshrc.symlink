@@ -37,6 +37,8 @@ setopt HIST_EXPIRE_DUPS_FIRST  # allow dups, but expire old ones when I hit HIST
 
 ## eval "$(docker-machine env dev)"
 
+eval "$(docker-machine env dev)"
+
 [ -e $HOME/.localrc ] && source $HOME/.localrc
 
 export NVM_DIR="/Users/oren/.nvm"
