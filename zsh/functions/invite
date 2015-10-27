@@ -1,5 +1,5 @@
 function invite-cmd {
-  heroku run bin/invite-token --to=$1 -a canvas-api-production
+  heroku run bin/invite-token --to=$1 -a canvas-api-production 2> /dev/null
 }
 
 # if a second argument run that # of times.
