@@ -1,0 +1,6 @@
+# heroku pg:psql -a canvas-api-prod BRONZE
+if [ -z "${DATABSE_URL}" ]; then
+  export DATABASE_URL=`heroku config:get DATABASE_URL -a canvas-api-production`
+fi
+
+pgcli $DATABASE_URL
