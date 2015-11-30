@@ -6,3 +6,13 @@ bower_components
 node_modules
 npm-debug.log
 tags
+*.swp
+*xcuserdata/
+*build/
+*.mode1v3
+*.pbxuser
+*.xcworkspace
+*.moved-aside/
+DerivedData
+Pods
+Carthage
