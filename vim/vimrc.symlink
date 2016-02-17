@@ -14,7 +14,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Colors
-Plugin 'altercation/vim-colors-solarized.git'
+" Plugin 'altercation/vim-colors-solarized.git'
 
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'junegunn/goyo.vim'
