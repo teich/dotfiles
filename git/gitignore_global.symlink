@@ -16,3 +16,4 @@ tags
 DerivedData
 Pods
 Carthage
+.pgdata
