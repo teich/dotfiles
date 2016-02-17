@@ -37,7 +37,11 @@ setopt HIST_EXPIRE_DUPS_FIRST  # allow dups, but expire old ones when I hit HIST
 
 [ -e $HOME/.localrc ] && source $HOME/.localrc
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 export NVM_DIR="/Users/oren/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+export NPM_TOKEN=ff662435-dfcd-44fc-973d-38ec0cebf57c
