@@ -1,1 +1,0 @@
-cd $(find $CODE -maxdepth 2 -type d | selecta)
