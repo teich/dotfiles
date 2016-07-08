@@ -4,3 +4,11 @@ fi
 
 source ~/.bash-powerline.sh
 
+loadnvm() {
+    export NVM_DIR="$HOME/.nvm"
+    source $NVM_DIR/nvm.sh
+}
+
+fol() {
+    pgcli `heroku config:get HEROKU_POSTGRESQL_IVORY_URL -a canvas-api-production`
+}
