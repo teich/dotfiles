@@ -4,11 +4,15 @@ fi
 
 source ~/.bash-powerline.sh
 
-loadnvm() {
-    export NVM_DIR="$HOME/.nvm"
-    source $NVM_DIR/nvm.sh
-}
-
 fol() {
     pgcli `heroku config:get HEROKU_POSTGRESQL_IVORY_URL -a canvas-api-production`
 }
+
+
+
+alias ec2='ssh -i "~/.ssh/oren-imac.pem" ec2-user@ec2-52-53-236-76.us-west-1.compute.amazonaws.com'
+
+source $HOME/.bash_completion
+
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
